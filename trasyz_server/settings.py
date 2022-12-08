@@ -37,7 +37,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'manager',
 ]
+
+# REST API에 대한 설정
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAdminUser',  # admin 사용자만 가능하도록
+    ],
+    'PAGE_SIZE': 5  # pagination 크기 지정 
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
