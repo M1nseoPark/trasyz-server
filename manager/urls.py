@@ -1,7 +1,6 @@
 from django.urls import path
 from . import views
 
-# http://127.0.0.1:8000/skin/products?id=1&skinType=dry
 # http://127.0.0.1:8000/manager/rent/?pid=1&mid=1&latitude=1&longitude=1
 
 app_name = 'manager'
