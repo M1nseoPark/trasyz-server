@@ -8,3 +8,5 @@ class Parkinglot(models.Model):
     longitude = models.FloatField(default=0.0)
     kickboard = models.IntegerField()
     bicycle = models.IntegerField()
+
+

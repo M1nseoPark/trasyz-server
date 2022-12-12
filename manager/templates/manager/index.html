@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Manager</title>
 </head>
 <body>
-    {{ parkinglot }}
+    <h3>현재 운행 중인 PM</h3>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>latitude</th>
+            <th>longitude</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <br><br><br>
+
+    <table>
+        <tr>
+            <th>name</th>
+            <th>address</th>
+            <th>latitude</th>
+            <th>longitude</th>
+            <th>kickboard</th>
+            <th>bicycle</th>
+        </tr>
+        {% for p in parkinglots %}
+        <tr>
+            <td>{{p.name}}</td>
+            <td>{{p.address}}</td>
+            <td>{{p.latitude}}</td>
+            <td>{{p.longitude}}</td>
+            <td>{{p.kickboard}}</td>
+            <td>{{p.bicycle}}</td>
+        </tr>
+        {%endfor%}
+    </table>
 </body>
 </html>

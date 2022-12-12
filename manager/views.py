@@ -1,12 +1,16 @@
 from django.http import JsonResponse
 from django.shortcuts import render
-import csv
-from django.views import View
+from .models import Parkinglot
 
 def index(request):
+    parkinglots = Parkinglot.objects.all()
+
     return render(
         request,
         'manager/index.html',
+        {
+            'parkinglots': parkinglots,
+        }
     )
 
 def get_post(request):
