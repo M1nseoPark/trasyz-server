@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-uos@a*zet=28a+uqwuh6#4+&qax!h9u^41zps6w3)xjck_*d(t'
+SECRET_KEY = 'django-insecure-kdv+yh*zv%(5c6bj2pjoqw#=zps#3iyu1qmu&(ic#8529*(_@!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,23 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'check',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'manager',
 ]
-
-# REST API에 대한 설정
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAdminUser',  # admin 사용자만 가능하도록
-    ],
-    'PAGE_SIZE': 5  # pagination 크기 지정 
-}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

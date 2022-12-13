@@ -13,15 +13,16 @@
             <th>longitude</th>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{parkinglot.id}}</td>
+            <td>{{parkinglot.latitude}}</td>
+            <td>{{parkinglot.longitude}}</td>
         </tr>
     </table>
     <br><br><br>
 
     <table>
         <tr>
+            <th>id</th>
             <th>name</th>
             <th>address</th>
             <th>latitude</th>
@@ -31,6 +32,7 @@
         </tr>
         {% for p in parkinglots %}
         <tr>
+            <td>{{p.id}}</td>
             <td>{{p.name}}</td>
             <td>{{p.address}}</td>
             <td>{{p.latitude}}</td>

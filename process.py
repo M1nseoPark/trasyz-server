@@ -8,6 +8,7 @@ df = pd.read_csv("pm_info2.csv")
 database = "db.sqlite3"
 conn = sqlite3.connect(database)
 dtype = {
+    "pid" : "IntegerField",
     "name" : "CharField",
     "address" : "CharField",
     "latitude" : "FloatField",
@@ -15,5 +16,5 @@ dtype = {
     "kickboard" : "IntegerField",
     "bicycle" : "IntegerField"
 }
-df.to_sql(name="manager_parkinglot", con=conn, if_exists='replace', dtype=dtype, index=True, index_label="id")
+df.to_sql(name="check_parkinglot", con=conn, if_exists='replace', dtype=dtype, index=True, index_label="pid")
 conn.close()
