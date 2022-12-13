@@ -22,6 +22,6 @@ class IndexView(View):
         pid = request['pid']
         kickboard = request['kickboard']
         parkinglots = get_object_or_404(Parkinglot, pk=pid)
-        parkinglots.kickboard = kickboard
+        parkinglots.kickboard += kickboard
         parkinglots.save()
         return HttpResponse(status=200)
