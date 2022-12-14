@@ -12,11 +12,13 @@
             <th>latitude</th>
             <th>longitude</th>
         </tr>
+        {% for r in runs %}
         <tr>
-            <td>{{parkinglot.id}}</td>
-            <td>{{parkinglot.latitude}}</td>
-            <td>{{parkinglot.longitude}}</td>
+            <td>{{r.rid}}</td>
+            <td>{{r.latitude}}</td>
+            <td>{{r.longitude}}</td>
         </tr>
+        {% endfor %}
     </table>
     <br><br><br>
 
